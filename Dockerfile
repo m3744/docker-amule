@@ -2,7 +2,7 @@ FROM linuxserver/baseimage
 
 MAINTAINER Sparklyballs <sparklyballs@linuxserver.io>
 
-ENV APTLIST="git-core zlib1g-dev build-essential libwxgtk3.0-dev libcrypto++-dev ibgtk2.0-dev libupnp6-dev"
+ENV APTLIST="autoconf git-core zlib1g-dev build-essential libwxgtk3.0-dev libcrypto++-dev ibgtk2.0-dev libupnp6-dev"
 
 # install packages
 RUN apt-get update -q && \
