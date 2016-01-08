@@ -2,14 +2,12 @@ FROM linuxserver/baseimage
 
 MAINTAINER Sparklyballs <sparklyballs@linuxserver.io>
 
-ENV APTLIST="autoconf git-core zlib1g-dev build-essential libwxgtk3.0-dev libcrypto++-dev ibgtk2.0-dev libupnp6-dev"
+ENV APTLIST="git-core libwxgtk2.8-dev libgd2-xpm-dev libreadline-dev libgeoip-dev \
+libupnp-dev binutils-dev libqt4-dev kdelibs5-dev bison flex build-essential"
 
 # install packages
 RUN apt-get update -q && \
 apt-get install $APTLIST -qy && \
-curl -o /tmp/boost.tar.gz -L http://sourceforge.net/projects/boost/files/boost/1.60.0/boost_1_60_0.tar.bz2/download && \
-mkdir -p /tmp/boostsource && \
-tar xvf /tmp/boost.tar.gz -C /tmp/boostsource --strip-components=1 && \
 git clone https://github.com/amule-project/amule /tmp/amule && \
 cd /tmp/amule && \
 dpkg-buildpackage -us -uc -b -rfakeroot && \
