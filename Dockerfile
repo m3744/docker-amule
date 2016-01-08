@@ -9,8 +9,9 @@ libglib2.0-dev libgtk2.0-dev libcrypto++-dev autoconf gettext autopoint"
 # install packages
 RUN apt-get update -q && \
 apt-get install $APTLIST -qy && \
-git clone https://github.com/amule-project/amule /tmp/amule && \
-cd /tmp/amule && \
+mkdir -p /source && \
+git clone https://github.com/amule-project/amule /source/amule && \
+cd /source/amule && \
 dpkg-buildpackage -us -uc -b -rfakeroot && \
 cd / && \
 
