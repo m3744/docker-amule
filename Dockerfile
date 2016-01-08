@@ -4,7 +4,7 @@ MAINTAINER Sparklyballs <sparklyballs@linuxserver.io>
 
 ENV APTLIST="git-core libwxgtk2.8-dev libgd2-xpm-dev libreadline-dev libgeoip-dev \
 debhelper libupnp-dev binutils-dev libqt4-dev kdelibs5-dev bison flex build-essential \
-libglib2.0-dev libgtk2.0-dev libcrypto++-dev autoconf gettext"
+libglib2.0-dev libgtk2.0-dev libcrypto++-dev autoconf gettext autopoint"
 
 # install packages
 RUN apt-get update -q && \
