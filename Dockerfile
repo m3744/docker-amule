@@ -12,8 +12,8 @@ mkdir -p /tmp/boostsource && \
 tar xvf /tmp/boost.tar.gz -C /tmp/boostsource --strip-components=1 && \
 git clone https://github.com/amule-project/amule /tmp/amule && \
 cd /tmp/amule && \
-autoconf && \
 automake && \
+autoconf && \
 ./configure --disable-debug --enable-optimize --with-denoise-level=3 --enable-upnp --enable-geoip --enable-nls --enable-amule-gui --enable-amule-daemon --enable-amulecmd --enable-webserver --enable-alcc --enable-alc --enable-cas --enable-wxcas --enable-mmap --with-boost=/tmp/boostsource && \
 make && \
 make install && \
